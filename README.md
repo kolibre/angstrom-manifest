@@ -16,11 +16,11 @@ To configure the scripts and download the build metadata, do:
 
 Run repo init to bring down the latest version of Repo with all its most recent bug fixes. You must specify a URL for the manifest, which specifies where the various repositories included in the Android source will be placed within your working directory.
 
-	$ repo init -u git://github.com/Angstrom-distribution/angstrom-manifest
+	$ repo init -u git://github.com/kolibre/angstrom-manifest
 
 To check out a branch other than "master", specify it with -b:
 
-	$ repo init -u git://github.com/Angstrom-distribution/angstrom-manifest -b angstrom-v2015.12-yocto2.0
+	$ repo init -u git://github.com/kolibre/angstrom-manifest -b vadelma
 
 When prompted, configure Repo with your real name and email address.
 
