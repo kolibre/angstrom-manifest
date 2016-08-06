@@ -51,7 +51,7 @@
   <project remote="yocto" name="meta-intel" path="sources/meta-intel" revision="fido"/>
   <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="fido"/>
   <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
-  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="3645b27848edd0d873925f5fa2a7686f3ff9eeb9"/>
+  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="2745399f75d7564fcc586d0365ff73be47849d0e"/>
   <project remote="yocto" name="meta-java" path="sources/meta-java" revision="8b776ac68f9af4596be3824152bcf0bc6b67fa1d"/>
   <project remote="yocto" name="meta-maker" path="sources/meta-maker" revision="fido"/>
 
