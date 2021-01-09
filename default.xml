@@ -1,58 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <default revision="master" sync-j="4"/>
-
-  <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="https://github.com" name="github"/>
-  <remote fetch="https://bitbucket.org" name="bitbucket"/>
   <remote fetch="http://git.linaro.org" name="linaro"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.shr-project.org" name="shr"/>
-
-  <project remote="linaro" name="openembedded/meta-linaro" path="sources/meta-linaro" revision="fido" />
-
-  <project remote="oe"     name="meta-handheld" path="sources/meta-handheld" revision="fido"/>
-
-  <project remote="bitbucket" name="gen_dev_sst/meta-kde4" path="sources/meta-kde4" revision="4287bd4a5e23e084b1f9e9d3235b4248bbe772f6"/>
-
-  <project remote="github" name="schnitzeltony/meta-gumstix-community" path="sources/meta-gumstix-community" revision="c4d7973f18fa8acb632f47e9ead074988d535343"/>
-  <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core" revision="fido" />
-  <project remote="github" name="openembedded/meta-openembedded" path="sources/meta-openembedded" revision="fido" />
-  <project remote="github" name="openembedded/bitbake" path="sources/bitbake" revision="1.26"/>
-  <project remote="github" name="koenkooi/meta-beagleboard" path="sources/meta-beagleboard" revision="fido"/>
-  <project remote="github" name="balister/meta-ettus" path="sources/meta-ettus" revision="4b6b5be45032f147b930528ea92ff0b6de454146"/>
-  <project remote="github" name="kraj/meta-nslu2" path="sources/meta-nslu2" revision="df0f6b8337d73c79a0047ba348ebd74e3778a3cf"/>
-  <project remote="github" name="kraj/meta-altera" path="sources/meta-altera" revision="0b497d6c59f644eedeab0a6bbf9a258525ab40ef"/>
-  <project remote="github" name="kraj/meta-jetson-tk1" path="sources/meta-jetson-tk1" revision="6e335008d2ad019e6f9b78fa9e2e2f23e50f1a5d"/>
-  <project remote="github" name="kraj/meta-musl" path="sources/meta-musl" revision="135db4df36e1114efab9fd3471ba2c65896cbe10"/>
-  <project remote="github" name="OSSystems/meta-browser" path="sources/meta-browser" revision="bb799af123f1361767885d5b8f7e14b334d3fd7a"/>
-  <project remote="github" name="meta-qt5/meta-qt5" path="sources/meta-qt5" revision="fido" />
-  <project remote="github" name="shr-distribution/meta-smartphone" path="sources/meta-smartphone" revision="fido" />
-  <project remote="github" name="kolibre/meta-kolibre" path="sources/meta-kolibre" revision="450b67897fd86d9e90cfecd9cc67dcd80df41ddb" />
-  <project remote="github" name="Freescale/meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra" revision="fido" />
-  <project remote="github" name="bmwcarit/meta-ros" path="sources/meta-ros" revision="312e6c4ddd76f56fce22a7b9b1a5b0fd8d39c224"/>
-  <project remote="github" name="linux-sunxi/meta-sunxi" path="sources/meta-sunxi" revision="fido"/>
-  <project remote="github" name="96boards/meta-96boards" path="sources/meta-96boards" revision="fido"/>
-  <project remote="github" name="linux4sam/meta-atmel" path="sources/meta-atmel" revision="fido"/>
-  <project remote="github" name="koenkooi/meta-dominion" path="sources/meta-dominion" revision="fido"/>
-  <project remote="github" name="koenkooi/meta-uav" path="sources/meta-uav" revision="95b5977627853f82b13310c35739b51cf449a1d6"/>
-  <project remote="github" name="koenkooi/meta-photography" path="sources/meta-photography" revision="dizzy"/>
-  <project remote="github" name="koenkooi/meta-edison" path="sources/meta-edison" revision="fido"/>
-  <project remote="github" name="slimlogic/meta-exynos" path="sources/meta-exynos" revision="fido"/>
-  <project remote="github" name="ndechesne/meta-qcom" path="sources/meta-qcom" revision="054abb9148dd0cf2d538eed8c87f13a19882bd0b"/>
-  <project remote="github" name="sysmocom/meta-telephony" path="sources/meta-telephony" revision="f44fee44be75a06deb85248b6e82c21a52bf34a7"/>
-  <project remote="github" name="koenkooi/meta-minnow" path="sources/meta-minnow" revision="fido"/>
-  <project remote="github" name="Angstrom-distribution/meta-angstrom" path="sources/meta-angstrom" revision="angstrom-v2015.06-yocto1.8">
-      <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+  <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
+  
+  <default revision="zeus" sync-j="16"/>
+  
+  <project name="96boards/meta-96boards" path="layers/meta-96boards" remote="github"/>
+  <project name="Angstrom-distribution/meta-angstrom" path="layers/meta-angstrom" remote="github" revision="angstrom-v2019.12-zeus">
+    <copyfile dest="setup-environment" src="setup-environment-internal"/>
   </project>
-
-  <project remote="yocto" name="meta-fsl-arm" path="sources/meta-fsl-arm" revision="fido" />
-  <project remote="yocto" name="meta-intel" path="sources/meta-intel" revision="fido"/>
-  <project remote="yocto" name="meta-ti" path="sources/meta-ti" revision="fido"/>
-  <project remote="yocto" name="meta-mono" path="sources/meta-mono" revision="7bc3cbb5db021700c445f07e2a95219f7298315f"/>
-  <project remote="yocto" name="meta-raspberrypi" path="sources/meta-raspberrypi" revision="2745399f75d7564fcc586d0365ff73be47849d0e"/>
-  <project remote="yocto" name="meta-java" path="sources/meta-java" revision="8b776ac68f9af4596be3824152bcf0bc6b67fa1d"/>
-  <project remote="yocto" name="meta-maker" path="sources/meta-maker" revision="fido"/>
-
+  <project name="EmbeddedAndroid/meta-rtlwifi" path="layers/meta-rtlwifi" remote="github" revision="174c9bacc4af9873bfbecf618e331c6d464540bf"/>
+  <project name="Freescale/meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" remote="github"/>
+  <project name="OSSystems/meta-browser" path="layers/meta-browser" remote="github" revision="7378141606822ef0bb985aaa00e442c9ea806429"/>
+  <project name="agherzan/meta-chip" path="layers/meta-chip" remote="github" revision="4ce5116136daec211a58b0579f88569ed21a075c"/>
+  <project name="agherzan/meta-raspberrypi" path="layers/meta-raspberrypi" remote="github"/>
+  <project name="bmwcarit/meta-ros" path="layers/meta-ros" remote="github" revision="72068b17e4192b51e09c8dc633805a35edac8701"/>
+  <project name="koenkooi/meta-beagleboard" path="layers/meta-beagleboard" remote="github" revision="thud"/>
+  <project name="koenkooi/meta-dominion" path="layers/meta-dominion" remote="github" revision="thud"/>
+  <project name="koenkooi/meta-edison" path="layers/meta-edison" remote="github" revision="9dee6d095dcc3ee62a11f96e7c74bd0754a73452"/>
+  <project name="koenkooi/meta-kodi" path="layers/meta-kodi" remote="github" revision="thud"/>
+  <project name="koenkooi/meta-maker" path="layers/meta-maker" remote="github" revision="warrior"/>
+  <project name="koenkooi/meta-photography" path="layers/meta-photography" remote="github" revision="thud"/>
+  <project name="koenkooi/meta-uav" path="layers/meta-uav" remote="github" revision="thud"/>
+  <project name="kraj/meta-altera" path="layers/meta-altera" remote="github" revision="8c725c59f86613907748414595b1adccf80909bc"/>
+  <project name="kraj/meta-nslu2" path="layers/meta-nslu2" remote="github" revision="21e90cd6f720c615a067318571178ee230ca1655"/>
+  <project name="kraj/meta-clang" path="layers/meta-clang" remote="github"/>
+  <project name="linux-sunxi/meta-sunxi" path="layers/meta-sunxi" remote="github"/>
+  <project name="linux4sam/meta-atmel" path="layers/meta-atmel" remote="github" revision="morty"/>
+  <project name="meta-freescale" path="layers/meta-freescale" remote="yocto"/>
+  <project name="meta-intel" path="layers/meta-intel" remote="yocto"/>
+  <project name="meta-java" path="layers/meta-java" remote="yocto"/>
+  <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" revision="b37d8b93924b314df3591b4a61e194ff3feb5517"/>
+  <project name="meta-qt5/meta-qt5" path="layers/meta-qt5" remote="github"/>
+  <project name="meta-rust/meta-rust" path="layers/meta-rust" remote="github" revision="0f950f5e333a1c8999320bf18232144f3dd9c80e"/>
+  <project name="meta-ti" path="layers/meta-ti" remote="yocto" revision="2251edb9b93aef4dfcd8a0f7b3ec4e1ddeb970af"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" remote="yocto"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" remote="yocto" revision="f3c8b1c9a8ae6a1690f7f5d907b65c588f65446a"/>
+  <project name="ndechesne/meta-qcom" path="layers/meta-qcom" remote="github"/>
+  <project name="openembedded/bitbake" path="bitbake" remote="github" revision="1.44"/>
+  <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github"/>
+  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github"/>
+  <project name="shr-distribution/meta-smartphone" path="layers/meta-smartphone" remote="github"/>
+  <project name="superna9999/meta-meson" path="layers/meta-meson" remote="github"/>
+  <project name="kolibre/meta-kolibre" path="layers/meta-kolibre" remote="github" revision="450b67897fd86d9e90cfecd9cc67dcd80df41ddb" />
 </manifest>
